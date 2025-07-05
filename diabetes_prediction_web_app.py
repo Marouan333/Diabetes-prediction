@@ -2,10 +2,10 @@ import numpy as np
 import pickle
 import streamlit as st
 
-loaded_model=pickle.load(open("C:\\Users\\ezbak\\OneDrive\\Documents\\HUSTLE\\PROJECTS\\ML\\diabetes prediction\\trained_model.sav", 'rb'))
+loaded_model=pickle.load(open("trained_model.sav", 'rb'))
 
 def diabetes_prediction(input_data):
-    with open("C:\\Users\\ezbak\\OneDrive\\Documents\\HUSTLE\\PROJECTS\\ML\\diabetes prediction\\scaler.pkl", 'rb') as f:
+    with open("scaler.pkl", 'rb') as f:
         scaler = pickle.load(f)
     
     to_np_array=np.asarray(input_data)
